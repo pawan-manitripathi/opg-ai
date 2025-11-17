@@ -8,6 +8,7 @@ import Projects from '@/components/profileComponent/projects';
 import Experience from '@/components/profileComponent/experience';
 import { ProjectInfo, ExperienceInfo, EducationInfo, PersonalInfo as PersonalInfoType } from "@/types/user";
 import Summary from '@/components/profileComponent/summary';
+import PublicToggle from '@/components/profileComponent/public-toggle';
 
 
 
@@ -122,6 +123,7 @@ export default function page() {
         {/* <div className="min-h-screen bg-gray-100 flex justify-center items-center p-10">
       <PersonalInfo />
     </div> */}
+        <PublicToggle />
         <PersonalInfo user={Personal} setUser={setPersonal} />
         <Summary summary={summary} setSummary={setSummary} />
         <Education user={education} setUser={setEducation} />

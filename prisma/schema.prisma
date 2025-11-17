@@ -60,4 +60,6 @@ model User {
 
   summary       String?
 
+  isPublic  Boolean  @default(false)
+
 }
