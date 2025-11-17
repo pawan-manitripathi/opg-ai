@@ -38,7 +38,6 @@ export default function Education({ user, setUser }: EducationProps) {
     const handleCancel = () => {
         setUser(originalUser); // restore previous DB values
         setIsEditing(false);
-        toast("Changes canceled");
     };
 
     return (
@@ -62,17 +61,17 @@ export default function Education({ user, setUser }: EducationProps) {
                         {isEditing && (
                             <>
                                 <button
-                                    onClick={handleCancel}
-                                    className="bg-red-100 text-red-700 px-3 py-1.5 rounded-lg hover:bg-red-200 transition flex items-center gap-2"
-                                >
-                                    <X size={16} /> Cancel
-                                </button>
-
-                                <button
                                     onClick={handleSave}
                                     className="bg-green-100 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-200 transition flex items-center gap-2"
                                 >
                                     <Save size={16} /> Save
+                                </button>
+
+                                <button
+                                    onClick={handleCancel}
+                                    className="bg-red-100 text-red-700 px-3 py-1.5 rounded-lg hover:bg-red-200 transition flex items-center gap-2"
+                                >
+                                    <X size={16} /> Cancel
                                 </button>
                             </>
                         )}
