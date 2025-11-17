@@ -11,6 +11,34 @@ export async function GET(req: NextRequest) {
     }
     const user = await prisma.user.findUnique({
       where: { id: Number(decodedToken.id) },
+      select: {
+        name: true,
+        profession: true,
+        contactNum: true,
+        location: true,
+        linkedin: true,
+        github: true,
+        summary: true,
+        bachelorCourse: true,
+        bachelorUniversity: true,
+        bachelorCgpa: true,
+        bachelorStart: true,
+        bachelorEnd: true,
+        masterCourse: true,
+        masterUniversity: true,
+        masterCgpa: true,
+        masterStart: true,
+        masterEnd: true,
+        jobTitle: true,
+        companyName: true,
+        employmentType: true,
+        jobLocation: true,
+        workDescription: true,
+        projectTitle: true,
+        projectLink: true,
+        projectDesc: true,
+        skill: true
+      },
     });
 
     if (!user) {
